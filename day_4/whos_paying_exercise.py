@@ -2,7 +2,6 @@
 #The person selected will have to pay for everybody's food bill.
 names_string = input("Give me everybody's names, separated by a comma. ")
 names_separated = names_string.split(", ")
-print(names_separated)
 number_of_names = len(names_separated)
 import random
 random_number = random.randint(0, number_of_names - 1)
