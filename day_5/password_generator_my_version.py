@@ -11,11 +11,11 @@ nr_numbers = int(input("How many numbers would you like?\n"))
 
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
-selected_letters = (''.join(random.sample(letters, nr_letters)))
+selected_letters = ''.join(random.sample(letters, nr_letters))
 
-selected_symbols = (''.join(random.sample(symbols, nr_symbols)))
+selected_symbols = ''.join(random.sample(symbols, nr_symbols))
 
-selected_numbers = (''.join(random.sample(numbers, nr_numbers)))
+selected_numbers = ''.join(random.sample(numbers, nr_numbers))
 
 print(selected_letters + selected_symbols + selected_numbers)
 #Hard Level - Order of characters randomised:

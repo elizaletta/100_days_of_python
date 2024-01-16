@@ -39,9 +39,10 @@ for number in range(1, nr_numbers + 1):
 
 random.shuffle(password_list)
 
-password = ""
+password = ''.join(password_list)
 
-for char in password_list:
-    password += char
+# password = ""
+# for char in password_list:
+#     password += char
 
 print(f"Your password is {password}")
