@@ -7,7 +7,10 @@ chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 lives = 6
 print(logo)
-print(f'Pssst, the solution is {chosen_word}.') #Testing code
+
+#Testing code
+#print(f'Pssst, the solution is {chosen_word}.') 
+
 #Create blanks
 display = []
 for each_letter in chosen_word:
