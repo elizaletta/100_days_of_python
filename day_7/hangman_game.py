@@ -1,10 +1,8 @@
 #Step 1 
 import random
-import hangman_words
-import hangman_art
-word_list = hangman_words.word_list
-logo = hangman_art.logo
-stages = hangman_art.stages
+from hangman_words import word_list
+from hangman_art import stages, logo
+
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 lives = 6
@@ -34,7 +32,7 @@ while not end_of_game:
 #TODO2: - If guess is not a letter in the chosen_word, Then reduce 'lives' by 1. If lives goes down to 0 then the game should stop and it should print "You lose."
 #Join all the elements in the list and turn it into a String.
     if guess not in chosen_word:
-        print(f"The letter {guess} is not in the word, sorry.") #If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+        print(f"The letter {guess} is not in the word. You lose a life.") #If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
         lives -= 1
         if lives == 0:
             end_of_game = True
