@@ -21,7 +21,7 @@ print(logo)
 answer = "yes"
 while answer == "yes":
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-    if direction != "encode" or direction != "decode":
+    if direction != "encode" and direction != "decode":
          print("Oops, there's a mistake.")
          direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
     text = input("Type your message:\n").lower()
