@@ -2,11 +2,21 @@ from auctionary_art import art
 
 import os
 
+print(art)
+winning_person = ""
+winning_bid = int(0)
+def who_wins_function(winning_person, winning_bid):
+    
+    for each_name in bids:
+        if bids[name] > winning_bid:
+            winning_bid = bids[name]
+            winning_person = name
+
 bids = {}
 
 auction_bids = []
 
-print(art)
+
 
 print("Welcome to the Secret Auctionary!")
 
@@ -26,10 +36,10 @@ while many_players:
 
     if question == "no":
         
-        who_wins = max(auction_bids)
+        who_wins_function()
         
         many_players = False
     
     os.system('clear')
 
-print(who_wins)
+print(f"The winner is{winning_person} with a bid of ${winning_bid}")
