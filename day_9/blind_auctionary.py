@@ -3,20 +3,18 @@ from auctionary_art import art
 import os
 
 print(art)
-winning_person = ""
-winning_bid = int(0)
-def who_wins_function(winning_person, winning_bid):
-    
-    for each_name in bids:
-        if bids[name] > winning_bid:
-            winning_bid = bids[name]
-            winning_person = name
+
+def who_wins_function(bidding_record):
+    highest_bid = 0
+    winner = ""
+    for each_bidder in bidding_record:
+        bid_amount = bidding_record[each_bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = each_bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}.")
 
 bids = {}
-
-auction_bids = []
-
-
 
 print("Welcome to the Secret Auctionary!")
 
@@ -30,16 +28,14 @@ while many_players:
 
     bids[name] = bid
 
-    auction_bids.append(bids[name])
-
     question = input("Are there any other players? Type yes or no.\n").lower()
 
     if question == "no":
         
-        who_wins_function()
-        
         many_players = False
-    
-    os.system('clear')
 
-print(f"The winner is{winning_person} with a bid of ${winning_bid}")
+        who_wins_function(bids)
+    
+    elif question == "yes":
+        
+        os.system('clear')
